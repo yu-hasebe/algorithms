@@ -6,9 +6,10 @@ fn lower_bound(n: usize, a: Vec<i64>, k: i64) -> usize {
         let mid = low + (high - low) / 2;
         if ok(&a, k, mid) {
             high = mid;
-        // The answer must be in (low, high).
+        // The answer must be in (low, high].
         } else {
             low = mid;
+            // The answer must be in (low, high].
         }
     }
     // After the loop, low + 1 == high is true and the answer is in (low, high].
