@@ -1,6 +1,6 @@
 fn lower_bound(n: usize, a: Vec<i64>, k: i64) -> usize {
     let mut low = 0;
-    let mut high = a.len();
+    let mut high = n;
     // After the loop, low + 1 == high must be true.
     while low + 1 < high {
         let mid = low + (high - low) / 2;
